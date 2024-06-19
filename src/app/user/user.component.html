@@ -1,10 +1,10 @@
 <div>
     <button (click)="onSelecteUser()">
-        <!-- because imagePath is a method which use a get keyword is not necessary add () -->
+        <!-- because imagePath and selectedUser is now a computed (signal) is necessary to add () -->
         <img
-            [src]="imagePath"
-            [alt]="selectedUser.name"
+            [src]="imagePath()"
+            [alt]="selectedUser().name"
         />
-        <span>{{ selectedUser.name }}</span>
+        <span>{{ selectedUser().name }}</span>
     </button>
 </div>
